@@ -17,6 +17,7 @@ poseConnect = mpDrawing.DrawingSpec(color=(254,255,225),thickness=2, circle_radi
 holistic = mpHolistic.Holistic(static_image_mode=True)
 
 image = cv.imread('data\pose.jpg')
+image = Rescale(image,0.45)
 # Convert the BGR image to RGB before processing
 result = holistic.process(cv.cvtColor(image,cv.COLOR_BGR2RGB))
 # Draw pose, left and right hands, and face landmarks on the image.
