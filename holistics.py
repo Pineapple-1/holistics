@@ -16,7 +16,7 @@ connect = mpDrawing.DrawingSpec(color=(255, 0, 255),thickness=1, circle_radius=2
 poseConnect = mpDrawing.DrawingSpec(color=(254,255,225),thickness=2, circle_radius=2)
 holistic = mpHolistic.Holistic(static_image_mode=True)
 
-image = cv.imread('data\pose.jpg')
+image = cv.imread('data/boy.jpg')
 image = Rescale(image,0.45)
 # Convert the BGR image to RGB before processing
 result = holistic.process(cv.cvtColor(image,cv.COLOR_BGR2RGB))
